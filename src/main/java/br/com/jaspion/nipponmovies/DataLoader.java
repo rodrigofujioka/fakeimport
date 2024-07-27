@@ -51,6 +51,10 @@ public class DataLoader implements CommandLineRunner {
             }else{
                 aluno.setName(faker.gameOfThrones().character());
             }
+            aluno.setCep(faker.number().numberBetween(29000000, 29999999)+"");
+            aluno.setEmail(faker.internet().emailAddress());
+            aluno.setNumeroCasa(faker.number().randomDigitNotZero()+"");
+            aluno.setAnoNascimento(faker.date().birthday(20,50).getYear());
             alunoRepository.save(aluno);
         }
     }
