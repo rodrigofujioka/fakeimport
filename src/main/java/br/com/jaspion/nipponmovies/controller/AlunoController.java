@@ -18,7 +18,6 @@ public class AlunoController {
 
     private final AlunoRepository alunoRepository;
 
-
     @GetMapping
     public List<Aluno> listarTodos() {
         return alunoRepository.findAll();
